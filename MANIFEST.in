@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include jute_mark_india *.css
+recursive-include jute_mark_india *.csv
+recursive-include jute_mark_india *.html
+recursive-include jute_mark_india *.ico
+recursive-include jute_mark_india *.js
+recursive-include jute_mark_india *.json
+recursive-include jute_mark_india *.md
+recursive-include jute_mark_india *.png
+recursive-include jute_mark_india *.py
+recursive-include jute_mark_india *.svg
+recursive-include jute_mark_india *.txt
+recursive-exclude jute_mark_india *.pyc

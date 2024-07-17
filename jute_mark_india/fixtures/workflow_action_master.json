@@ -1,0 +1,128 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-01 12:53:18.392423",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-17 13:14:23.388638",
+  "name": "Save",
+  "workflow_action_name": "Save"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-22 18:39:11.721900",
+  "name": "Submission from HO",
+  "workflow_action_name": "Submission from HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-22 18:42:11.629871",
+  "name": "Submit",
+  "workflow_action_name": "Submit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-23 17:59:46.262513",
+  "name": "Reject by RO",
+  "workflow_action_name": "Reject by RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-23 17:59:55.640355",
+  "name": "Reject by HO",
+  "workflow_action_name": "Reject by HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-01 12:53:18.394788",
+  "name": "Reject",
+  "workflow_action_name": "Reject"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-01 12:53:18.398124",
+  "name": "Review",
+  "workflow_action_name": "Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-22 14:47:17.802460",
+  "name": "Approval by RO",
+  "workflow_action_name": "Approval by RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-22 14:47:27.486774",
+  "name": "Approval by HO",
+  "workflow_action_name": "Approval by HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-29 11:09:40.345632",
+  "name": "Assign VO",
+  "workflow_action_name": "Assign VO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-29 11:25:15.780355",
+  "name": "Send to HO",
+  "workflow_action_name": "Send to HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-29 12:11:36.619208",
+  "name": "Draft",
+  "workflow_action_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-29 12:56:04.345886",
+  "name": "Edit/Fill Remaining",
+  "workflow_action_name": "Edit/Fill Remaining"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-03-29 13:12:15.679099",
+  "name": "Send to RO for Approval",
+  "workflow_action_name": "Send to RO for Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-06-08 15:31:53.180659",
+  "name": "Assign RO",
+  "workflow_action_name": "Assign RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-07-04 12:30:25.541495",
+  "name": "Edit/Assign",
+  "workflow_action_name": "Edit/Assign"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2023-08-11 17:34:44.689177",
+  "name": "Re-Assign",
+  "workflow_action_name": "Re-Assign"
+ }
+]

@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-06-05 17:10:03.888233",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "roll_number",
+  "available_qantity",
+  "allocated_to",
+  "allocated_to_user",
+  "column_break_6nzhx",
+  "status",
+  "available_from_qr_code",
+  "available_end_qr_code",
+  "no_of_labels"
+ ],
+ "fields": [
+  {
+   "fieldname": "roll_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Roll Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_qantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Available Qantity",
+   "read_only": 1
+  },
+  {
+   "default": "Full Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Full Available\nPartial Available\nAllocated to RO Full\nAllocated to RO Partial\nAllocated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6nzhx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "naming_series",
+   "options": "JMI-ROLL-.DD.-.MM.-",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "available_from_qr_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Available From QR Code",
+   "options": "JMI QR Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "available_end_qr_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Available End QR Code",
+   "options": "JMI QR Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocated_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Allocated To",
+   "options": "Regional Office",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocated_to_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Allocated To User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_labels",
+   "fieldtype": "Int",
+   "label": "No of Labels in above Range",
+   "read_only": 1
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-14 10:21:09.414524",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Roll wise QR",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

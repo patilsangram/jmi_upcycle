@@ -1,0 +1,227 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-04-18 15:10:27.623720",
+  "name": "Application Submitted",
+  "style": "",
+  "workflow_state_name": "Application Submitted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2023-03-01 12:53:18.372325",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2023-03-01 12:53:18.374536",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-22 15:32:25.765568",
+  "name": "Assign VO",
+  "style": "Info",
+  "workflow_state_name": "Assign VO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-22 15:32:25.753882",
+  "name": "Assign RO",
+  "style": "Info",
+  "workflow_state_name": "Assign RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-22 15:32:34.717352",
+  "name": "Approval Pending By RO",
+  "style": "Warning",
+  "workflow_state_name": "Approval Pending By RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-22 15:32:34.670885",
+  "name": "Approval Pending By HO",
+  "style": "Warning",
+  "workflow_state_name": "Approval Pending By HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-09 16:45:07.474867",
+  "name": "Submit",
+  "style": "Primary",
+  "workflow_state_name": "Submit"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-09 16:45:51.058998",
+  "name": "Cancel By HO",
+  "style": "Warning",
+  "workflow_state_name": "Cancel By HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-22 15:32:25.674965",
+  "name": "Re-Assign",
+  "style": "Info",
+  "workflow_state_name": "Re-Assign"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-09 16:45:36.327372",
+  "name": "Cancel By RO",
+  "style": "Warning",
+  "workflow_state_name": "Cancel By RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-09 16:44:52.695632",
+  "name": "Review",
+  "style": "Primary",
+  "workflow_state_name": "Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-17 11:59:32.371020",
+  "name": "Save",
+  "style": "Info",
+  "workflow_state_name": "Save"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-23 18:01:15.016574",
+  "name": "Rejected by HO",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-09 16:45:26.261020",
+  "name": "Approved By RO",
+  "style": "Success",
+  "workflow_state_name": "Approved By RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-09 16:45:17.168130",
+  "name": "Approved By HO",
+  "style": "Success",
+  "workflow_state_name": "Approved By HO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-23 18:01:14.997166",
+  "name": "Rejected by RO",
+  "style": "Danger",
+  "workflow_state_name": "Rejected by RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "question-sign",
+  "modified": "2023-03-22 15:32:34.729529",
+  "name": "Pending",
+  "style": "Warning",
+  "workflow_state_name": "Pending"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-29 13:10:36.985659",
+  "name": "Recheck",
+  "style": "",
+  "workflow_state_name": "Recheck"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-29 15:57:59.206111",
+  "name": "Submitted",
+  "style": "",
+  "workflow_state_name": "Submitted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-29 16:07:47.449638",
+  "name": "Assigned VO",
+  "style": "",
+  "workflow_state_name": "Assigned VO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-06-08 15:30:34.942498",
+  "name": "Assigned RO",
+  "style": "",
+  "workflow_state_name": "Assigned RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-06-09 11:20:28.978518",
+  "name": "Sent For Approval To RO",
+  "style": "",
+  "workflow_state_name": "Sent For Approval To RO"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-03-02 13:13:41.919971",
+  "name": "Draft",
+  "style": "Info",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2023-07-04 12:31:53.227807",
+  "name": "Edit",
+  "style": "",
+  "workflow_state_name": "Edit"
+ }
+]

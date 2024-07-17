@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "autoname": "Site Sch -.####",
+ "creation": "2023-02-20 15:45:22.353304",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ro_office",
+  "vo",
+  "application_no",
+  "applicant_name",
+  "no_of_sites_in_application",
+  "column_break_eygsp",
+  "no_of_sites_to_visit",
+  "schedule_visit_date",
+  "details",
+  "is_distance_150_km",
+  "enter_km",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "ro_office",
+   "fieldtype": "Link",
+   "label": "RO Office",
+   "options": "Regional Office"
+  },
+  {
+   "fieldname": "vo",
+   "fieldtype": "Link",
+   "label": "VO",
+   "options": "Mobile App User Log in details"
+  },
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Link",
+   "label": "Application No",
+   "options": "Jute Mark India Registration form"
+  },
+  {
+   "fetch_from": "application_no.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "no_of_sites_in_application",
+   "fieldtype": "Data",
+   "label": "No of Sites in application"
+  },
+  {
+   "fieldname": "no_of_sites_to_visit",
+   "fieldtype": "Int",
+   "label": "NO of sites to visit"
+  },
+  {
+   "fieldname": "schedule_visit_date",
+   "fieldtype": "Date",
+   "label": "Schedule Visit Date"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Data",
+   "label": "Details"
+  },
+  {
+   "fieldname": "is_distance_150_km",
+   "fieldtype": "Select",
+   "label": "Is Distance >150 KM",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "enter_km",
+   "fieldtype": "Float",
+   "label": "Enter KM"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Site Schedule",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_eygsp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-02-21 09:54:20.863441",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Site Schedule",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

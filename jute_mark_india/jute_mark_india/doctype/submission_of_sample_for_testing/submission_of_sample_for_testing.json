@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-09 15:46:36.712157",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product_type",
+  "description_of_product",
+  "function_of_jute_material_in_the_product",
+  "declared_fibre_content"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product Type",
+   "options": "Product Type"
+  },
+  {
+   "fieldname": "description_of_product",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description of Product"
+  },
+  {
+   "fieldname": "declared_fibre_content",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Declared Fibre Content"
+  },
+  {
+   "fieldname": "function_of_jute_material_in_the_product",
+   "fieldtype": "Link",
+   "label": "Function of jute material in the product",
+   "options": "JMI Product Function"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-07 11:10:21.252340",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Submission of Sample For Testing",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

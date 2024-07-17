@@ -1,0 +1,302 @@
+{
+ "actions": [],
+ "autoname": "Site Visit-.####",
+ "creation": "2023-02-27 18:51:38.779013",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "application_no",
+  "applicant_email",
+  "address_line1",
+  "distance_in_km",
+  "tahsil__taluka",
+  "state",
+  "remarks_on_rejection",
+  "column_break_xhobu",
+  "assigned_for",
+  "assigned_username",
+  "visit_planed_on",
+  "townvillage",
+  "is_distance_150_km",
+  "district",
+  "regional_office",
+  "site_visit_details_section",
+  "address_visited",
+  "visited_location",
+  "no_of_male_artisan",
+  "no_of_female_artisan",
+  "column_break_yurez",
+  "commentsdiscussion_pointshighlights",
+  "next_stepway_forward",
+  "no_of_other_artisan",
+  "amended_from",
+  "is_primary_site",
+  "site_visit_done"
+ ],
+ "fields": [
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Application No",
+   "options": "Jute Mark India Registration form",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "application_no.townvillage",
+   "fieldname": "townvillage",
+   "fieldtype": "Data",
+   "label": "Town/Village"
+  },
+  {
+   "fieldname": "address_line1",
+   "fieldtype": "Data",
+   "label": "Address Line1"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "visit_planed_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Visit Planed On",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "distance_in_km",
+   "fieldtype": "Float",
+   "label": "Distance in KM",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "No",
+   "fieldname": "is_distance_150_km",
+   "fieldtype": "Select",
+   "label": "Is Distance >150 KM",
+   "options": "\nYes\nNo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_no.tahsil__taluka",
+   "fieldname": "tahsil__taluka",
+   "fieldtype": "Link",
+   "label": "Tahsil / Taluka ",
+   "options": "TalukaTahsil"
+  },
+  {
+   "fetch_from": "application_no.district",
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fetch_from": "application_no.state",
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "address_visited",
+   "fieldtype": "Small Text",
+   "label": "Address Visited"
+  },
+  {
+   "fieldname": "visited_location",
+   "fieldtype": "Data",
+   "label": "Visited Location"
+  },
+  {
+   "fieldname": "commentsdiscussion_pointshighlights",
+   "fieldtype": "Small Text",
+   "label": "Comments/Discussion points/Highlights"
+  },
+  {
+   "fieldname": "next_stepway_forward",
+   "fieldtype": "Data",
+   "label": "Next Step/Way Forward"
+  },
+  {
+   "fieldname": "column_break_yurez",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xhobu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Actual Site Visit Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "site_visit_details_section",
+   "fieldtype": "Section Break",
+   "label": "Site Visit Details"
+  },
+  {
+   "fetch_from": "application_no.regional_office",
+   "fieldname": "regional_office",
+   "fieldtype": "Link",
+   "label": "Regional Office",
+   "options": "Regional Office"
+  },
+  {
+   "fieldname": "assigned_for",
+   "fieldtype": "Link",
+   "label": "Assigned For",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_of_male_artisan",
+   "fieldtype": "Int",
+   "label": "No of Male Artisan",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_of_female_artisan",
+   "fieldtype": "Int",
+   "label": "No of Female Artisan",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "no_of_other_artisan",
+   "fieldtype": "Int",
+   "label": "No of Other Artisan",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_primary_site",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Primary Site",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval: doc.workflow_state === 'Pending';",
+   "fieldname": "remarks_on_rejection",
+   "fieldtype": "Small Text",
+   "label": "Remarks on Rejection"
+  },
+  {
+   "default": "0",
+   "fieldname": "site_visit_done",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Site Visit Done",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_no.email_id",
+   "fieldname": "applicant_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Applicant Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assigned_for.full_name",
+   "fieldname": "assigned_username",
+   "fieldtype": "Data",
+   "label": "Assigned Username",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-11 22:57:09.428554",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Actual Site Visit Plan",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verification Officer(VO)",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HO",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

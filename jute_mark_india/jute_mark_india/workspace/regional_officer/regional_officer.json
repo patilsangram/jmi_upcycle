@@ -1,0 +1,286 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"iN02KHiatl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Jute Mark India</span>\",\"col\":12}},{\"id\":\"gtpS6g0XuP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JMI Applications\",\"col\":4}},{\"id\":\"9NkRPxyBSQ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Application Received\",\"col\":4}},{\"id\":\"1Ovz1W9WQG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Application Registered\",\"col\":3}},{\"id\":\"TSHT5u4nnb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Label Enhancement\",\"col\":3}},{\"id\":\"l51jrBUvEa\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JMI Renewal\",\"col\":3}},{\"id\":\"ZmB3OzQJI_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JMI Appeal\",\"col\":3}},{\"id\":\"UYCIDPv_ne\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"On-Site Verification Form\",\"col\":3}},{\"id\":\"EVi5AepHiv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Site Visit Plan\",\"col\":3}},{\"id\":\"z_RkLD0U21\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Request For Label\",\"col\":4}},{\"id\":\"effP1jo0Bw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Label Allocation\",\"col\":3}},{\"id\":\"DCfJaKoY6K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"vk11VH6dzV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Label Statistics\",\"col\":3}},{\"id\":\"pPji-sBowA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JMI Dashboard\",\"col\":3}},{\"id\":\"6Ma7MYncTi\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Reports &amp; Masters</b>\",\"col\":12}},{\"id\":\"eog8g2N445\",\"type\":\"card\",\"data\":{\"card_name\":\"JMI\",\"col\":4}},{\"id\":\"4l8xpyAaBR\",\"type\":\"card\",\"data\":{\"card_name\":\"JMI Transactions\",\"col\":4}},{\"id\":\"5ZcFke1bN-\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2024-02-28 16:52:48.146165",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "integration",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Regional Officer",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Jute Mark India Registration form",
+   "link_count": 0,
+   "link_to": "Jute Mark India Registration form",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "On-Site Verification Form",
+   "link_count": 0,
+   "link_to": "On-Site Verification Form",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Application Renewal",
+   "link_count": 0,
+   "link_to": "Application Renewal",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Actual Site Visit Plan",
+   "link_count": 0,
+   "link_to": "Actual Site Visit Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI Appeal",
+   "link_count": 0,
+   "link_to": "JMI Appeal",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI Transactions",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Label Enhancement",
+   "link_count": 0,
+   "link_to": "Label Enhancement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Request for Label",
+   "link_count": 0,
+   "link_to": "Request for Label",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Label Allocation",
+   "link_count": 0,
+   "link_to": "Label Allocation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI QR Code",
+   "link_count": 0,
+   "link_to": "JMI QR Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Roll wise QR",
+   "link_count": 0,
+   "link_to": "Roll wise QR",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Application / Registration Report",
+   "link_count": 0,
+   "link_to": "Application registration Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "User Status",
+   "link_count": 0,
+   "link_to": "User Status",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Label Fulfilment Report",
+   "link_count": 0,
+   "link_to": "Label Fulfilment Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-02-28 16:58:03.768370",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Regional Officer",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "Jute Mark India",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "Regional Officer(RO)"
+  }
+ ],
+ "sequence_id": 1.1,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "JMI Dashboard",
+   "link_to": "JMI Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Request For Label",
+   "link_to": "Request for Label",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Pending",
+   "label": "Site Visit Plan",
+   "link_to": "Actual Site Visit Plan",
+   "stats_filter": "{\"workflow_state\":[\"=\",\"Pending\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "JMI Renewal",
+   "link_to": "Application Renewal",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "format": "{} Application Received",
+   "label": "Application Received",
+   "link_to": "Jute Mark India Registration form",
+   "stats_filter": "[[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Assigned VO\",false],[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Submitted\",false],[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Re-Assign\",false],[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Approval Pending By RO\",false],[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Approval Pending By HO\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Application Registered",
+   "link_to": "Jute Mark India Registration form",
+   "stats_filter": "[[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Approved By HO\",false],[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Approved By RO\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Application Submitted",
+   "label": "JMI Applications",
+   "link_to": "Jute Mark India Registration form",
+   "stats_filter": "[[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Application Submitted\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Label Statistics",
+   "link_to": "label-details",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "JMI Appeal",
+   "link_to": "JMI Appeal",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "On-Site Verification Form",
+   "link_to": "On-Site Verification Form",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Label Enhancement",
+   "link_to": "Label Enhancement",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Label Allocation",
+   "link_to": "Label Allocation",
+   "type": "DocType"
+  }
+ ],
+ "title": "Regional Officer"
+}

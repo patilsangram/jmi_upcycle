@@ -1,0 +1,71 @@
+{
+ "cards": [
+  {
+   "card": "Applications"
+  },
+  {
+   "card": "Applications Completed"
+  },
+  {
+   "card": "Payment Made"
+  },
+  {
+   "card": "Application Submitted"
+  },
+  {
+   "card": "Assigned VO"
+  },
+  {
+   "card": "Site Verification"
+  },
+  {
+   "card": "Sample or Report Submission"
+  },
+  {
+   "card": "Registration"
+  },
+  {
+   "card": "Artisan"
+  },
+  {
+   "card": "Retailer"
+  },
+  {
+   "card": "Manufacturer"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Application Submitted",
+   "width": "Half"
+  },
+  {
+   "chart": "Registration",
+   "width": "Half"
+  },
+  {
+   "chart": "Label Sales",
+   "width": "Half"
+  },
+  {
+   "chart": "Label Stock",
+   "width": "Half"
+  },
+  {
+   "chart": "Label Indent and Stock",
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-02-22 15:50:46.731056",
+ "dashboard_name": "JMI Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-05-05 13:10:42.490917",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "JMI Dashboard",
+ "owner": "Administrator"
+}

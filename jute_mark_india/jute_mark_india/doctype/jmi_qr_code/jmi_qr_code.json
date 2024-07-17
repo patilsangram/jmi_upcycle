@@ -1,0 +1,206 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-09 13:18:23.608394",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "production_month",
+  "sequence_number",
+  "qrcode_id",
+  "jmi_url",
+  "qr_code_link",
+  "qr_code",
+  "column_break_1zfrm",
+  "production_year",
+  "checksum_number",
+  "barcode_constant",
+  "encrypted_qrcode_id",
+  "status",
+  "roll_number",
+  "allocated_to",
+  "allocated_to_user",
+  "jmi_reg",
+  "register_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "qrcode_id",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "QRCode ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming_series",
+   "options": "JMI-QR-.DD.-.MM.-",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "qr_code_link",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "QR Code Link",
+   "options": "URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Image",
+   "label": "QR Code",
+   "options": "qr_code_link"
+  },
+  {
+   "fieldname": "production_month",
+   "fieldtype": "Data",
+   "label": "Production Month",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "production_year",
+   "fieldtype": "Data",
+   "label": "Production Year",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "checksum_number",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Checksum Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1zfrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "barcode_constant",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Barcode Constant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sequence_number",
+   "fieldtype": "Data",
+   "label": "Sequence Number",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "encrypted_qrcode_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Encrypted QRCode ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "jmi_url",
+   "fieldtype": "Data",
+   "label": "JMI URL",
+   "length": 1000,
+   "options": "URL",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Available\nAllocated to RO\nAllocated",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocated_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Allocated To (Regional Office)",
+   "options": "Regional Office",
+   "read_only": 1
+  },
+  {
+   "fieldname": "roll_number",
+   "fieldtype": "Data",
+   "label": "Roll Number",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "allocated_to_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Allocated To User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "jmi_reg.app__reg_number",
+   "fieldname": "register_no",
+   "fieldtype": "Data",
+   "label": "Register No"
+  },
+  {
+   "fieldname": "jmi_reg",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "JMI Reg",
+   "options": "Label Allocation"
+  }
+ ],
+ "image_field": "qr_code_link",
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-25 16:19:43.983716",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "JMI QR Code",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "search_fields": "qrcode_id",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

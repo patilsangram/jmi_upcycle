@@ -1,0 +1,64 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "Region",
+   "width": 0
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "width": 0
+  }
+ ],
+ "creation": "2023-02-27 17:19:13.143557",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "Region",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "ON REGIONAL OFFICE LETTERHEAD",
+ "modified": "2023-02-27 18:06:46.200324",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Application registration Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Jute Mark India Registration form",
+ "report_name": "Application registration Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "HO"
+  },
+  {
+   "role": "Regional Officer(RO)"
+  },
+  {
+   "role": "Verification Officer(VO)"
+  }
+ ]
+}

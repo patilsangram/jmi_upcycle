@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-30 18:51:50.552685",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_unit__outlet",
+  "address",
+  "assign_to",
+  "site_visit_id",
+  "column_break_3uvjh",
+  "no_of_male_artisan",
+  "no_of_female_artisan",
+  "no_of_other_artisan",
+  "approve",
+  "reject"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_unit__outlet",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Name of Unit / Outlet",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Address"
+  },
+  {
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Assign To",
+   "options": "User"
+  },
+  {
+   "fieldname": "site_visit_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Site Visit ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_male_artisan",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "No of Male Artisan",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_female_artisan",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "No of Female Artisan",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_other_artisan",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "No of Other Artisan",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3uvjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "approve",
+   "fieldtype": "Check",
+   "label": "Approve",
+   "permlevel": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "reject",
+   "fieldtype": "Check",
+   "label": "Reject",
+   "permlevel": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-25 10:01:32.275328",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Label Enhancement VO Assignment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

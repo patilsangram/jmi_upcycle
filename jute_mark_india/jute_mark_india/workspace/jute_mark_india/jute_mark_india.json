@@ -1,0 +1,486 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"iN02KHiatl\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Jute Mark India</span>\",\"col\":12}},{\"id\":\"gtpS6g0XuP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JMI Applications\",\"col\":4}},{\"id\":\"HRliz_5E8H\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Application Processed\",\"col\":4}},{\"id\":\"ZlVUnJJOWH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Registered Application\",\"col\":4}},{\"id\":\"EVi5AepHiv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Site Visit Plan\",\"col\":4}},{\"id\":\"UYCIDPv_ne\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"On-Site Verification Form\",\"col\":4}},{\"id\":\"z_RkLD0U21\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Request For Label\",\"col\":3}},{\"id\":\"effP1jo0Bw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Label Allocation\",\"col\":3}},{\"id\":\"TSHT5u4nnb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Label Enhancement\",\"col\":3}},{\"id\":\"ZmB3OzQJI_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JMI Appeal\",\"col\":3}},{\"id\":\"DCfJaKoY6K\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"vk11VH6dzV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Label Statistics\",\"col\":3}},{\"id\":\"pQOTrbf6pB\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard\",\"col\":3}},{\"id\":\"anzaMVXkIs\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JMI DASHBOARD\",\"col\":3}},{\"id\":\"L0lnCcjW69\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Label Entitlement\",\"col\":3}},{\"id\":\"WPI_7ocvGi\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Application Status Funnel\",\"col\":3}},{\"id\":\"6Ma7MYncTi\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Reports &amp; Masters</b>\",\"col\":12}},{\"id\":\"eog8g2N445\",\"type\":\"card\",\"data\":{\"card_name\":\"JMI\",\"col\":4}},{\"id\":\"4l8xpyAaBR\",\"type\":\"card\",\"data\":{\"card_name\":\"JMI Transactions\",\"col\":4}},{\"id\":\"5ZcFke1bN-\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"IFzI5Lyj79\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"oFTDEeNid-\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"7hnEVTaQbW\",\"type\":\"card\",\"data\":{\"card_name\":\"JMI Logs\",\"col\":4}}]",
+ "creation": "2023-03-16 09:26:58.098828",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "integration",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Jute Mark India",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI Logs",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "User Registration",
+   "link_count": 0,
+   "link_to": "User Registration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI QR View Log",
+   "link_count": 0,
+   "link_to": "JMI QR View Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "User Device",
+   "link_count": 0,
+   "link_to": "User Device",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 7,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "State",
+   "link_count": 0,
+   "link_to": "State",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "District",
+   "link_count": 0,
+   "link_to": "District",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pincode",
+   "link_count": 0,
+   "link_to": "Pincode",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI UOM",
+   "link_count": 0,
+   "link_to": "JMI UOM",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "TalukaTahsil",
+   "link_count": 0,
+   "link_to": "TalukaTahsil",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Regional Office",
+   "link_count": 0,
+   "link_to": "Regional Office",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI Product Function",
+   "link_count": 0,
+   "link_to": "JMI Product Function",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI Transactions",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI QR Code Builder",
+   "link_count": 0,
+   "link_to": "JMI QR Code Builder",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Label Enhancement",
+   "link_count": 0,
+   "link_to": "Label Enhancement",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Request for Label",
+   "link_count": 0,
+   "link_to": "Request for Label",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Label Allocation",
+   "link_count": 0,
+   "link_to": "Label Allocation",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI QR Code",
+   "link_count": 0,
+   "link_to": "JMI QR Code",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Roll wise QR",
+   "link_count": 0,
+   "link_to": "Roll wise QR",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Jute Mark India Registration form",
+   "link_count": 0,
+   "link_to": "Jute Mark India Registration form",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "On-Site Verification Form",
+   "link_count": 0,
+   "link_to": "On-Site Verification Form",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Application Renewal",
+   "link_count": 0,
+   "link_to": "Application Renewal",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Actual Site Visit Plan",
+   "link_count": 0,
+   "link_to": "Actual Site Visit Plan",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI Appeal",
+   "link_count": 0,
+   "link_to": "JMI Appeal",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 6,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Application / Registration Report",
+   "link_count": 0,
+   "link_to": "Application registration Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "User Status",
+   "link_count": 0,
+   "link_to": "User Status",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Label Fulfilment Report",
+   "link_count": 0,
+   "link_to": "Label Fulfilment Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Label Tracking Report",
+   "link_count": 0,
+   "link_to": "Label Tracking Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Label Stock Report",
+   "link_count": 0,
+   "link_to": "Label Stock Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Label Scanned Report",
+   "link_count": 0,
+   "link_to": "Label Scanned Report",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Android App Settings",
+   "link_count": 0,
+   "link_to": "Android App Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "QR Code Settings",
+   "link_count": 0,
+   "link_to": "QR Code Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "JMI Settings",
+   "link_count": 0,
+   "link_to": "JMI Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-05-13 22:36:20.111683",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Jute Mark India",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Application Status Funnel",
+   "link_to": "application-status",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Application Processed",
+   "link_to": "Jute Mark India Registration form",
+   "stats_filter": "[[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Assigned VO\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Registered Application",
+   "link_to": "Jute Mark India Registration form",
+   "stats_filter": "[[\"Jute Mark India Registration form\",\"workflow_state\",\"=\",\"Approved By RO\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Pending",
+   "label": "Site Visit Plan",
+   "link_to": "Actual Site Visit Plan",
+   "stats_filter": "{\"workflow_state\":[\"=\",\"Pending\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "JMI DASHBOARD",
+   "link_to": "JMI Dashboard",
+   "type": "Dashboard"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Label Entitlement",
+   "link_to": "labels-count",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Application Submitted",
+   "label": "JMI Applications",
+   "link_to": "Jute Mark India Registration form",
+   "stats_filter": "{\"workflow_state\":[\"=\",\"Application Submitted\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Dashboard",
+   "link_to": "dashboard-jmi-applic",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Label Statistics",
+   "link_to": "label-details",
+   "type": "Page"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "JMI Appeal",
+   "link_to": "JMI Appeal",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "On-Site Verification Form",
+   "link_to": "On-Site Verification Form",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Label Enhancement",
+   "link_to": "Label Enhancement",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Label Allocation",
+   "link_to": "Label Allocation",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Request For Label",
+   "link_to": "Request for Label",
+   "type": "DocType"
+  }
+ ],
+ "title": "Jute Mark India"
+}

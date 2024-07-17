@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Label Req-{user_name}-{###}",
+ "creation": "2023-03-09 13:37:19.056982",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "application_no",
+  "application_date",
+  "label_enhancement",
+  "user_name",
+  "label_type",
+  "column_break_qw3q0",
+  "label_allotted",
+  "label_used",
+  "label_balanced",
+  "amended_from",
+  "pro_rata_section",
+  "monthly_allotted_labels",
+  "column_break_emqxh",
+  "labels_allotted_from_current_month"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Link",
+   "label": "Application No.",
+   "options": "On-Site Verification Form"
+  },
+  {
+   "fieldname": "label_enhancement",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Label Enhancement",
+   "options": "LABEL ENTITLEMENT"
+  },
+  {
+   "fetch_from": "application_no.applicant_name",
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "label": "User Name"
+  },
+  {
+   "fetch_from": "application_no.label_type",
+   "fieldname": "label_type",
+   "fieldtype": "Data",
+   "label": "Label Type "
+  },
+  {
+   "fieldname": "column_break_qw3q0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "application_no.no_of_labels",
+   "fieldname": "label_allotted",
+   "fieldtype": "Int",
+   "label": "Label Allotted "
+  },
+  {
+   "fieldname": "label_used",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Label Used",
+   "reqd": 1
+  },
+  {
+   "fieldname": "label_balanced",
+   "fieldtype": "Int",
+   "label": "Label Balanced",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Request For Label Fulfilment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "pro_rata_section",
+   "fieldtype": "Section Break",
+   "label": "Pro Rata"
+  },
+  {
+   "fieldname": "monthly_allotted_labels",
+   "fieldtype": "Int",
+   "label": "Monthly Allotted Labels",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_emqxh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "labels_allotted_from_current_month",
+   "fieldtype": "Int",
+   "label": "Labels Allotted From Current Month",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_no.date",
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-03-15 17:51:03.652305",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Request For Label Fulfilment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-03-09 18:01:56.278887",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "application_no",
+  "on_site_verification",
+  "label_type",
+  "reason_for_enhancement",
+  "column_break_zgkge",
+  "applicant_name",
+  "no_of_labels",
+  "total_label_as_per_prorata",
+  "labels_balance",
+  "required_no_of_labels",
+  "attachment_for_label",
+  "user_id",
+  "section_break_ab4ur",
+  "assign_vo_for_sites",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Application No",
+   "options": "Jute Mark India Registration form",
+   "reqd": 1
+  },
+  {
+   "fieldname": "label_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Label Type",
+   "options": "\nTemporary\nPermanent",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "on_site_verification.no_of_labels",
+   "fieldname": "no_of_labels",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. Of Labels Allotted (For Year)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Label Enhancement",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "required_no_of_labels",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Required No Of Labels",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason_for_enhancement",
+   "fieldtype": "Small Text",
+   "label": "Reason for Enhancement"
+  },
+  {
+   "fetch_from": "application_no.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Applicant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zgkge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "application_no",
+   "fieldname": "on_site_verification",
+   "fieldtype": "Link",
+   "label": "On Site Verification",
+   "options": "On-Site Verification Form"
+  },
+  {
+   "default": "JMI-LE-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "JMI-LE-",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachment_for_label",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Attachment for Label"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User"
+  },
+  {
+   "fieldname": "labels_balance",
+   "fieldtype": "Int",
+   "label": "Labels Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ab4ur",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assign_vo_for_sites",
+   "fieldtype": "Table",
+   "label": "Assign VO for Sites",
+   "options": "Label Enhancement VO Assignment",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "total_label_as_per_prorata",
+   "fieldtype": "Int",
+   "label": "Total Label as per ProRata",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-01 13:47:00.919223",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Label Enhancement",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verification Officer(VO)",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verification Officer(VO)",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

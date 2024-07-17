@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "creation": "2023-04-21 10:05:05.219539",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "actual_site_visit_plan",
+  "site_name",
+  "distance_in_km",
+  "is_distance_150_km",
+  "unit_address",
+  "geo_location",
+  "latitude",
+  "longitude",
+  "column_break_vz4gb",
+  "photograph_1",
+  "photograph_1_view",
+  "photograph_2",
+  "photograph_2_view"
+ ],
+ "fields": [
+  {
+   "fieldname": "photograph_1",
+   "fieldtype": "Attach Image",
+   "label": "Photograph 1"
+  },
+  {
+   "fieldname": "photograph_2",
+   "fieldtype": "Attach Image",
+   "label": "Photograph 2"
+  },
+  {
+   "fieldname": "actual_site_visit_plan",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Actual Site Visit Plan",
+   "options": "Actual Site Visit Plan",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "actual_site_visit_plan.is_distance_150_km",
+   "fieldname": "is_distance_150_km",
+   "fieldtype": "Data",
+   "label": "Is Distance >150 KM",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "actual_site_visit_plan.distance_in_km",
+   "fieldname": "distance_in_km",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Distance in KM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vz4gb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "actual_site_visit_plan.address_visited",
+   "fieldname": "unit_address",
+   "fieldtype": "Small Text",
+   "label": "Unit Address"
+  },
+  {
+   "fieldname": "geo_location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Geo Location"
+  },
+  {
+   "depends_on": "photograph_1",
+   "fieldname": "photograph_1_view",
+   "fieldtype": "Image",
+   "label": "Photograph 1",
+   "options": "photograph_1"
+  },
+  {
+   "depends_on": "photograph_2",
+   "fieldname": "photograph_2_view",
+   "fieldtype": "Image",
+   "label": "Photograph 2",
+   "options": "photograph_2"
+  },
+  {
+   "fetch_from": "actual_site_visit_plan.address_line1",
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Name"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-05-23 17:46:33.278422",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Site Visit Photos",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
