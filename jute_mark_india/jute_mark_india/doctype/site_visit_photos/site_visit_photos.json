@@ -66,7 +66,7 @@
   {
    "fieldname": "geo_location",
    "fieldtype": "Data",
-   "in_list_view": 1,
+   "hidden": 1,
    "label": "Geo Location"
   },
   {
@@ -93,18 +93,20 @@
   {
    "fieldname": "latitude",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Latitude"
   },
   {
    "fieldname": "longitude",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Longitude"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-05-23 17:46:33.278422",
+ "modified": "2024-07-28 22:58:19.148615",
  "modified_by": "Administrator",
  "module": "jute_mark_india",
  "name": "Site Visit Photos",

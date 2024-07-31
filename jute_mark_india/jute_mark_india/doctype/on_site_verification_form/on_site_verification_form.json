@@ -545,8 +545,7 @@
    "fieldname": "site_visit_photos",
    "fieldtype": "Table",
    "label": "Site Visit Photos",
-   "options": "Site Visit Photos",
-   "read_only": 1
+   "options": "Site Visit Photos"
   },
   {
    "depends_on": "signature_with_name",
@@ -589,7 +588,6 @@
    "label": "No. of Label Approved "
   }
  ],
- "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -597,7 +595,7 @@
    "link_fieldname": "application_no"
   }
  ],
- "modified": "2024-01-28 12:23:55.413122",
+ "modified": "2024-07-28 22:55:57.334379",
  "modified_by": "Administrator",
  "module": "jute_mark_india",
  "name": "On-Site Verification Form",
