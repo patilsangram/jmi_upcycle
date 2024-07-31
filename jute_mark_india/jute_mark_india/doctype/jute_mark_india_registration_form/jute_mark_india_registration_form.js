@@ -484,9 +484,9 @@ let set_filters = function(frm){
 }
 
 let change_field_properties = function(frm){
-	frm.set_df_property('documents', 'cannot_add_rows', true);
-	frm.set_df_property('documents', 'cannot_delete_rows', true);
-	frm.set_df_property('documents', 'cannot_delete_all_rows', true);
+	// frm.set_df_property('documents', 'cannot_add_rows', true);
+	// frm.set_df_property('documents', 'cannot_delete_rows', true);
+	// frm.set_df_property('documents', 'cannot_delete_all_rows', true);
 	if(cur_frm.doc.category_b==='Artisan'){
 		artisan_field_property(frm);
 	}

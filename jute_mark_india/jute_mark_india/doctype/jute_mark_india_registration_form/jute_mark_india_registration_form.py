@@ -90,7 +90,7 @@ class JuteMarkIndiaRegistrationform(Document):
 
 	def autoname(self):
 		self.set_category_id()
-		self.name = make_autoname('A-' + str(self.district_code) + '-' + str(self.category_id)+ '-' + '.####.')
+		self.name = make_autoname('UR-A-' + str(self.district_code) + '-' + str(self.category_id)+ '-' + '.####.')
 		self.registration_number = self.name
 
 	def after_insert(self):
@@ -280,10 +280,10 @@ class JuteMarkIndiaRegistrationform(Document):
 					frappe.throw("Please add Religion!")
 				if not self.category__scst_other_in_case_b_is_1:
 					frappe.throw("Please add Category!")
-				if not self.aadhar_number:
-					frappe.throw("Please add Aadhar Number!")
-				if not self.aadhar_card_copy:
-					frappe.throw("Please attach Aadhar Copy!")
+				#if not self.aadhar_number:
+				#	frappe.throw("Please add Aadhar Number!")
+				#if not self.aadhar_card_copy:
+				#	frappe.throw("Please attach Aadhar Copy!")
 				if not self.identification_proof:
 					frappe.throw("Please add Identification_proof!")
 			else:
@@ -295,10 +295,10 @@ class JuteMarkIndiaRegistrationform(Document):
 					frappe.throw("Please add Pan Number!")
 				if not self.pan_card_copy:
 					frappe.throw("Please attach PAN card Copy!")
-				if not self.udyog_aadhar:
-					frappe.throw("Please add Udyog Aadhar Number!")
-				if not self.udyog_aadhar_copy:
-					frappe.throw("Please attach Udyog Aadhar copy!")
+				#if not self.udyog_aadhar:
+				#	frappe.throw("Please add Udyog Aadhar Number!")
+				#if not self.udyog_aadhar_copy:
+				#	frappe.throw("Please attach Udyog Aadhar copy!")
 				if not self.certificate_of_registration__in_case_b_is_2_or_3:
 					frappe.throw("Please attach certificate_of_registration!")
 
@@ -308,9 +308,9 @@ class JuteMarkIndiaRegistrationform(Document):
 				frappe.throw("Please add Proof of Address!")
 			if not self.upload_agreement:
 				frappe.throw("Please Upload Agreement!")
-			for row in self.documents:
-				if not row.upload_test_report:
-					frappe.throw("Please Upload Test Report in Documents Section")
+			# for row in self.documents:
+			# 	if not row.upload_test_report:
+			# 		frappe.throw("Please Upload Test Report in Documents Section")
 
 
 			if frappe.db.exists("On-Site Verification Form",{'textile_registration_no':self.name}):
