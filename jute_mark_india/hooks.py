@@ -6,7 +6,7 @@ app_publisher = "admin"
 app_description = "jute_mark_india"
 app_email = "admin@example.com"
 app_license = "MIT"
-app_logo_url = "/assets/jute_mark_india/images/JuteMark-logo.jpg"
+app_logo_url = "/assets/jute_mark_india/images/Textile_Logo-removebg.png"
 # Includes in <head>
 # ------------------
 
@@ -210,8 +210,10 @@ scheduler_events = {
 #	}
 # ]
 website_context = {
-	"favicon": "/assets/jute_mark_india/images/JuteMark-logo.jpg",
-	"splash_image": "/assets/jute_mark_india/images/JuteMark-logo.jpg",
+	#"favicon": "/assets/jute_mark_india/images/JuteMark-logo.jpg",
+	#"splash_image": "/assets/jute_mark_india/images/JuteMark-logo.jpg",
+	"favicon": "/assets/jute_mark_india/images/Textile_Logo-removebg.png",
+	"splash_image": "/assets/jute_mark_india/images/Textile_Logo-removebg.png",
 }
 
 signup_form_template = "/templates/signup-form.html"
