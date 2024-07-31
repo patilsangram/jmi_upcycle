@@ -1,0 +1,100 @@
+	<div class="text-center login-content container page-card">
+		<form role="form" class="form-signup">
+	<h3 class="form-signin-heading mb-4">{{ _("Sign Up") }}</h3>
+    
+	<div class="form-group">
+		<input type="email" name="email_id" id="email_id"
+			class="form-control" placeholder="{{ _('Email Address') }}">
+	</div>
+	<div class="form-group">
+		<input name="mobile_number" id="mobile"
+			class="form-control" placeholder="{{ _('Mobile Number') }}">
+	</div>
+	<div>
+	<button class="btn btn-primary mt-2 btn-sm send-otp" id="send-opt">Send OTP</button>
+	<button class="btn btn-primary mt-2 btn-sm enter-otp" id="enter-otp">Enter OTP</button>
+	</div>
+	<br>
+	<div class="form-group">
+		<input name="enter_opt" id="enter_opt"
+			class="form-control" placeholder="{{ _('Enter OTP') }}" style="display: none">
+	</div>
+	<br>
+	<div>
+		<button class="btn btn-primary mt-2 btn-sm verify-otp" id="verify-opt" style="display: none">Verify OTP</button>
+	</div>
+	</form>
+	</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('#send-opt').click(function() {
+				// location.href = '/'
+			console.log($("#email_id").val())
+			console.log('ja an')
+			event.preventDefault()
+			var args = {};
+			args.email = ($("#email_id").val() || "").trim();
+			args.phone = ($("#mobile").val() || "").trim();
+			// if (!args.email || !validate_email(args.email)) {
+			// 	frappe.msgprint('{{ _("वैध ईमेल पत्ता आवश्यक आहे") }}', 'red');
+			// 	return false;
+			// }
+			if (args.email || args.phone){
+				frappe.call({
+					method:'jute_mark_india.www.registration_page.sign_up',
+					freeze: true,
+					args: {
+						// 'email_id': args.email,
+						'phone': args.phone
+					},
+				})
+				.done(success => {
+					console.log(success)
+					if(success.message[0] == 0) {
+						frappe.msgprint(success.message[1])
+						return
+					}
+					else {
+						frappe.msgprint('OTP Sent')
+					}
+				})
+			}
+		})
+		})
+
+		$('#enter-otp').click(function() {
+			$('#enter_opt').show()
+			$('#verify-opt').show()
+			event.preventDefault()
+		})
+
+	// 	$('#verify-opt').click(function() {
+	// 		event.preventDefault()
+	// 		otp = $('#enter_opt').val()
+	// 		email_id = $("#email_id").val()
+	// 		frappe.call({
+	// 			method: 'jute_mark_india.www.registration_page.verify_otp',
+	// 			freeze: true,
+	// 			args: {
+	// 				'email_id': email_id,
+	// 				'otp': otp
+	// 			}
+	// 		})
+	// 		.done(success => {
+	// 		console.log(success)
+	// 		if(success.message[0] == 1) {
+	// 			frappe.msgprint(success.message[1])
+	// 			location.href = 'jute_mark_india/doctype/jute_mark_india_registration_form'
+	// 			return
+	// 		}
+	// 		else {
+	// 			frappe.msgprint('चुकीचा OTP')
+	// 		}
+	// 	})
+	// })
+		
+
+</script>

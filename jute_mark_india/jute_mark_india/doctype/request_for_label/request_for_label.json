@@ -1,0 +1,169 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "creation": "2023-03-30 15:45:00.747373",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "jmi_registration_form",
+  "app__reg_number",
+  "posting_date",
+  "required_qty",
+  "remarks",
+  "column_break_mclqh",
+  "requested_by",
+  "entity_full_name",
+  "contact_person_name",
+  "regional_office",
+  "is_ro",
+  "is_paid",
+  "allocated_percentage",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Requested By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "required_qty",
+   "fieldtype": "Int",
+   "label": "Requested Qty",
+   "read_only_depends_on": "eval:doc.is_paid==1;",
+   "reqd": 1
+  },
+  {
+   "fieldname": "regional_office",
+   "fieldtype": "Link",
+   "label": "Regional Office",
+   "options": "Regional Office",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_mclqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Request for Label",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_ro",
+   "fieldtype": "Check",
+   "label": "Is RO",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "requested_by.full_name",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "depends_on": "eval:doc.is_ro==0",
+   "fieldname": "jmi_registration_form",
+   "fieldtype": "Link",
+   "label": "JMI Registration Form",
+   "options": "Jute Mark India Registration form"
+  },
+  {
+   "depends_on": "eval:doc.is_ro==0",
+   "fetch_from": "jmi_registration_form.registration_number",
+   "fieldname": "app__reg_number",
+   "fieldtype": "Data",
+   "label": "App / Reg Number"
+  },
+  {
+   "fetch_from": "jmi_registration_form.entity_full_name",
+   "fieldname": "entity_full_name",
+   "fieldtype": "Data",
+   "label": "Entity Full Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "allocated_percentage",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Allocated Percentage",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Label Allocation",
+   "link_fieldname": "request_for_label"
+  }
+ ],
+ "modified": "2024-07-17 11:53:12.115865",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Request for Label",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

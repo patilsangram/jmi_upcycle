@@ -1,0 +1,669 @@
+{
+ "actions": [],
+ "autoname": "On-Site-Visit-.####",
+ "creation": "2023-02-13 16:24:38.948615",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "connections_tab",
+  "details_of_applicant_section",
+  "textile_registration_no",
+  "applicant_name",
+  "middle_name",
+  "last_name",
+  "gender",
+  "mobile_number",
+  "column_break_jmwfc",
+  "email_id",
+  "category_b",
+  "category_id",
+  "photo",
+  "date",
+  "religion",
+  "category__scst_other_in_case_b_is_1",
+  "address_detail_section",
+  "state",
+  "district",
+  "district_code",
+  "regional_office",
+  "tahsil__taluka",
+  "townvillage",
+  "column_break_n4lhk",
+  "address_line1",
+  "address_line_2",
+  "address_line_3",
+  "pin_code",
+  "section_break_h3dmz",
+  "njb_regi_no",
+  "proof_of_address",
+  "aadhar_number",
+  "udyog_aadhar",
+  "pan_number",
+  "gst_number",
+  "certificate_of_registration__in_case_b_is_2_or_3",
+  "identification_proof",
+  "column_break_azcps",
+  "addhar_copy_from_regi",
+  "prev_udyog_aadhar_copy",
+  "prev_pan_card_copy",
+  "prev_gst_copy",
+  "details_of_product_section",
+  "details_of_product",
+  "details_of_prouction_unitsretailer_sales_outlets_section",
+  "textile_details_of_production_units_or_retailer_sales_outlets",
+  "submission_of_sample_for_testing_section",
+  "submission_of_sample_for_testing",
+  "site__details_tab",
+  "site_visit_photos",
+  "label_entitlement_section",
+  "label_type",
+  "no_of_labels",
+  "attachment_for_label",
+  "terms",
+  "column_break_ufveh",
+  "jmi_appeal",
+  "application_renewal",
+  "label_enhancement",
+  "no_of_label_requested",
+  "no_of_label_approved",
+  "remarks",
+  "for_office_use_only_tab",
+  "reviewed_the_onsite_verification_report_for_please_select",
+  "label_entitlement_are",
+  "date_of_execution_of_agreement",
+  "date_of_first_issue_of_labels",
+  "reasons_for_rejection",
+  "column_break_5fwpq",
+  "date_of_issue_of_pass_book",
+  "office_remarks",
+  "signature_with_name",
+  "signature_preview",
+  "stamp_of_ro_in_charge",
+  "date_issue_registration_letter_and_label_entitlement_letter",
+  "registration_no_allotted_and_date_of_registration",
+  "section_break_eh1mg",
+  "checklist",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_of_applicant_section",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Details Of Applicant",
+   "options": "fa fa-flag"
+  },
+  {
+   "fieldname": "textile_registration_no",
+   "fieldtype": "Link",
+   "label": "Application No",
+   "options": "Jute Mark India Registration form",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.middle_name",
+   "fetch_if_empty": 1,
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.last_name",
+   "fetch_if_empty": 1,
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.gender",
+   "fieldname": "gender",
+   "fieldtype": "Data",
+   "label": "Gender",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.mobile_number",
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jmwfc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "textile_registration_no.email_id",
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id"
+  },
+  {
+   "fetch_from": "textile_registration_no.category_b",
+   "fieldname": "category_b",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category B",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.photo",
+   "fetch_if_empty": 1,
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.date",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Application Date"
+  },
+  {
+   "fetch_from": "textile_registration_no.religion",
+   "fieldname": "religion",
+   "fieldtype": "Data",
+   "label": "Religion"
+  },
+  {
+   "fetch_from": "textile_registration_no.category__scst_other_in_case_b_is_1",
+   "fieldname": "category__scst_other_in_case_b_is_1",
+   "fieldtype": "Data",
+   "label": "Category ( SC/ST/ Other) (In Case Of Artisan)"
+  },
+  {
+   "fieldname": "address_detail_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Address Details",
+   "options": "fa fa-truck"
+  },
+  {
+   "description": "House/Building No, Street/Lane Name 1",
+   "fetch_from": "textile_registration_no.address_line_1",
+   "fieldname": "address_line1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "reqd": 1
+  },
+  {
+   "description": "Street/Lane Name 2, Area/Locality\n\n",
+   "fetch_from": "textile_registration_no.address_line_2",
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "description": "Land Mark",
+   "fetch_from": "textile_registration_no.address_line_3",
+   "fieldname": "address_line_3",
+   "fieldtype": "Data",
+   "label": "Address Line 3"
+  },
+  {
+   "fetch_from": "textile_registration_no.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_n4lhk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "textile_registration_no.district",
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "regional_office",
+   "fieldtype": "Data",
+   "label": "Regional Office",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "textile_registration_no.tahsil__taluka",
+   "fieldname": "tahsil__taluka",
+   "fieldtype": "Data",
+   "label": "Tahsil / Taluka "
+  },
+  {
+   "fetch_from": "textile_registration_no.pin_code",
+   "fieldname": "pin_code",
+   "fieldtype": "Data",
+   "label": "Pin Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_h3dmz",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Attachment"
+  },
+  {
+   "fetch_from": "textile_registration_no.proof_of_address",
+   "fieldname": "proof_of_address",
+   "fieldtype": "Data",
+   "label": "Proof Of Address"
+  },
+  {
+   "fetch_from": "textile_registration_no.aadhar_number",
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Number"
+  },
+  {
+   "fetch_from": "textile_registration_no.udyog_aadhar",
+   "fieldname": "udyog_aadhar",
+   "fieldtype": "Data",
+   "label": "Udyog Aadhar"
+  },
+  {
+   "fetch_from": "textile_registration_no.pan_number",
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number"
+  },
+  {
+   "fetch_from": "textile_registration_no.gst_number",
+   "fieldname": "gst_number",
+   "fieldtype": "Data",
+   "label": "GST Number"
+  },
+  {
+   "fetch_from": "textile_registration_no.certificate_of_registration__in_case_b_is_2_or_3",
+   "fieldname": "certificate_of_registration__in_case_b_is_2_or_3",
+   "fieldtype": "Attach Image",
+   "label": "Certificate of Registration ( For Manufacturer or Retailer )"
+  },
+  {
+   "fieldname": "column_break_azcps",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "textile_registration_no.identification_proof",
+   "fieldname": "identification_proof",
+   "fieldtype": "Data",
+   "label": "Identification Proof"
+  },
+  {
+   "fetch_from": "textile_registration_no.aadhar_card_copy",
+   "fetch_if_empty": 1,
+   "fieldname": "addhar_copy_from_regi",
+   "fieldtype": "Attach Image",
+   "label": "Prev Aadhar copy "
+  },
+  {
+   "fieldname": "details_of_product_section",
+   "fieldtype": "Tab Break",
+   "hidden": 1,
+   "label": "Details Of Product",
+   "options": "fa fa-tag"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_of_prouction_unitsretailer_sales_outlets_section",
+   "fieldtype": "Section Break",
+   "label": "DETAILS OF PROUCTION UNITS/RETAILER SALES OUTLETS"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "textile_details_of_production_units_or_retailer_sales_outlets",
+   "fieldtype": "Table",
+   "label": "Textile Details of Production Units or Retailer Sales Outlets",
+   "options": "Textile_Details of Production Units or Retailer Sales Outlets"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "submission_of_sample_for_testing_section",
+   "fieldtype": "Section Break",
+   "label": "SUBMISSION OF SAMPLE FOR TESTING"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "submission_of_sample_for_testing",
+   "fieldtype": "Table",
+   "label": "Submission of Sample For Testing",
+   "options": "Submission of Sample For Testing"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "label_entitlement_section",
+   "fieldtype": "Tab Break",
+   "label": "Label Entitlement",
+   "options": "fa fa-cogs"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Small Text",
+   "label": "Terms"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "for_office_use_only_tab",
+   "fieldtype": "Tab Break",
+   "label": "Final Approval"
+  },
+  {
+   "fieldname": "reviewed_the_onsite_verification_report_for_please_select",
+   "fieldtype": "Select",
+   "label": "Comment of RO Incharge",
+   "options": "\nApproved\nNot Approved\nNeeds further clarification"
+  },
+  {
+   "fieldname": "label_entitlement_are",
+   "fieldtype": "Select",
+   "label": "Label Entitlement Is",
+   "options": "\nRecommended\nNot Recommended"
+  },
+  {
+   "fieldname": "date_of_execution_of_agreement",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date Of Execution Of Agreement "
+  },
+  {
+   "fieldname": "date_of_first_issue_of_labels",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date Of First Issue Of Labels"
+  },
+  {
+   "fieldname": "column_break_5fwpq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_issue_of_pass_book",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Date Of Issue Of Pass Book",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "office_remarks",
+   "fieldtype": "Data",
+   "label": "Other Remarks"
+  },
+  {
+   "fieldname": "signature_with_name",
+   "fieldtype": "Attach Image",
+   "label": "Applicant's Signature ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stamp_of_ro_in_charge",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Stamp Of RO In Charge"
+  },
+  {
+   "fieldname": "date_issue_registration_letter_and_label_entitlement_letter",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Date of Issue of Registration letter and Label Entitlement Letter"
+  },
+  {
+   "description": "(B Stands for Category B = 1 Artisan, B -=2 Manufacturer, B = 3 Retailer)",
+   "fieldname": "registration_no_allotted_and_date_of_registration",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Registration No allotted and Date of Registration"
+  },
+  {
+   "fetch_from": "textile_registration_no.udyog_aadhar_copy",
+   "fetch_if_empty": 1,
+   "fieldname": "prev_udyog_aadhar_copy",
+   "fieldtype": "Attach Image",
+   "label": "Prev Udyog Aadhar Copy"
+  },
+  {
+   "fetch_from": "textile_registration_no.pan_card_copy",
+   "fetch_if_empty": 1,
+   "fieldname": "prev_pan_card_copy",
+   "fieldtype": "Attach Image",
+   "label": "Prev PAN Card Copy"
+  },
+  {
+   "fetch_from": "textile_registration_no.gst_copy",
+   "fetch_if_empty": 1,
+   "fieldname": "prev_gst_copy",
+   "fieldtype": "Attach Image",
+   "label": "Prev GST Copy"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "reasons_for_rejection",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Reasons for rejection",
+   "options": "Rejection Reasons"
+  },
+  {
+   "fieldname": "section_break_eh1mg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "checklist",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Checklist",
+   "options": "Checklist"
+  },
+  {
+   "fieldname": "townvillage",
+   "fieldtype": "Data",
+   "label": "Town/Village"
+  },
+  {
+   "fieldname": "site__details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Site  Details"
+  },
+  {
+   "fetch_from": "textile_registration_no.njb_regi_no",
+   "fieldname": "njb_regi_no",
+   "fieldtype": "Data",
+   "label": "NJB Regi No",
+   "read_only": 1
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "details_of_product",
+   "fieldtype": "Table",
+   "label": "Details of Product",
+   "options": "Details of Products"
+  },
+  {
+   "fetch_from": "textile_registration_no.district_code",
+   "fieldname": "district_code",
+   "fieldtype": "Data",
+   "label": "District Code"
+  },
+  {
+   "fetch_from": "textile_registration_no.category_id",
+   "fieldname": "category_id",
+   "fieldtype": "Data",
+   "label": "Category ID"
+  },
+  {
+   "default": "Permanent",
+   "fieldname": "label_type",
+   "fieldtype": "Select",
+   "label": "Entitlement Type",
+   "options": "\nTemporary\nPermanent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_labels",
+   "fieldtype": "Int",
+   "label": "No Of Labels"
+  },
+  {
+   "fieldname": "attachment_for_label",
+   "fieldtype": "Attach",
+   "label": "Attachment for Label",
+   "read_only": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "On-Site Verification Form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "site_visit_photos",
+   "fieldtype": "Table",
+   "label": "Site Visit Photos",
+   "options": "Site Visit Photos"
+  },
+  {
+   "depends_on": "signature_with_name",
+   "fieldname": "signature_preview",
+   "fieldtype": "Image",
+   "label": "Signature Preview",
+   "options": "signature_with_name"
+  },
+  {
+   "fieldname": "column_break_ufveh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jmi_appeal",
+   "fieldtype": "Link",
+   "label": "JMI Appeal",
+   "options": "JMI Appeal"
+  },
+  {
+   "fieldname": "application_renewal",
+   "fieldtype": "Link",
+   "label": "Application Renewal",
+   "options": "Application Renewal"
+  },
+  {
+   "fieldname": "label_enhancement",
+   "fieldtype": "Link",
+   "label": "Label Enhancement",
+   "options": "Label Enhancement"
+  },
+  {
+   "fieldname": "no_of_label_requested",
+   "fieldtype": "Data",
+   "label": "No. of Label Requested",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_label_approved",
+   "fieldtype": "Int",
+   "label": "No. of Label Approved "
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Request For Label Fulfilment",
+   "link_fieldname": "application_no"
+  }
+ ],
+ "modified": "2024-07-28 22:55:57.334379",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "On-Site Verification Form",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verification Officer(VO)",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HO",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

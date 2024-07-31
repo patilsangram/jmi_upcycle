@@ -1,0 +1,181 @@
+<!-- <!DOCTYPE html> -->
+<script type="text/javascript">
+    frappe.ready(() => {
+        
+
+        $(document).ready(function () {
+            $(".nav-link").on("click", function () {
+                $(".nav-link").removeClass("active");
+                $(this).addClass("active");
+            });
+
+        function updateClock() {
+            const now = new Date();
+            const timeZone = 'Asia/Kolkata';
+            const options = {
+                timeZone,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                weekday: 'short',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour12: false,
+            };
+
+            $('.clock').html( now.toLocaleString('en-US', options) ) 
+         }
+
+        updateClock();
+
+        setInterval(updateClock, 1000);
+
+        })
+    })
+</script>
+
+<style>
+    .header-menu-bar  nav {
+        background: #832f62;
+    }
+
+    .header-menu-bar  nav ul li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .header-menu-bar nav ul li a {
+        letter-spacing: 0.5px;
+        font-size: 1em;
+        color: #fff;
+        transition: .5s ease;
+    }
+
+    .header-menu-bar nav ul li a:hover {
+        background-image: linear-gradient(#ec931f, #AD6406);
+        color: #fff;
+        transition: .5s ease;
+    }
+
+    .header-menu-bar .banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-menu-bar .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .header-menu-bar .stat_tables {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .header-menu-bar .navbar1 {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .header-menu-bar .stat_tables th {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        background-color: #dae8f4;
+    }
+
+    .header-menu-bar  .navbar {
+        background: #832f62;
+        padding: 5px 10px;
+    }
+
+    .header-menu-bar  .navbar-light .navbar-nav .nav-link:hover,
+    .header-menu-bar  .navbar-light .navbar-nav .nav-link:focus,
+    .header-menu-bar  .navbar-light .navbar-nav .nav-link.active {
+        background-image: linear-gradient(#ec931f, #AD6406);
+        color: #fff;
+        transition: .5s ease;
+    }
+
+    .navbar-brand {
+        justify-content: space-between;
+        flex-grow: 1;
+        padding-right: 10px; 
+        display: flex;
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+            background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        .custom-toggler button:focus {
+            outline: 1px dotted white;
+        }
+
+    @media (min-width: 992px){
+        .header-menu-bar .navbar-brand, .mobile-clock{ display: none; }
+        
+    }
+
+    @media (max-width: 992px){
+        .desktop-clock { display: none; }
+    }
+
+    @media (max-width: 768pxpx){
+        .header-menu-bar .navbar-nav .nav-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+        }
+    }
+
+    @media screen and (max-width: 420px) {
+        #clock { font-size: 9px; }
+    }
+    
+
+</style>
+
+<div class="header-menu-bar">
+    <nav class="navbar navbar-expand-lg custom-toggler">
+        <div class="navbar-brand">
+            <a href="/home">
+                <img src="/assets/jute_mark_india/images/JuteMark-logo.jpg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            </a>
+            <div class="clock ml-2 align-self-center justify-self-center mobile-clock" id="clock" style="color:#fff;"> </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Office Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Registered User Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sign-up">Online Application</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/jute-mark-dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/registered-user">Search Registered User</a>
+                </li>
+                <li class="nav-item">
+                    <div style="padding-left: 40px;"></div>
+                </li>
+            </ul>
+            <div class="clock px-5 py-2 desktop-clock" id="clock" style="color:#fff;"> </div>
+        </div>
+    </nav>
+</div>

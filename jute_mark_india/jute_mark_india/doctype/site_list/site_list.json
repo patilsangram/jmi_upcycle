@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "autoname": "format:{site_name}",
+ "creation": "2023-02-20 11:08:16.675665",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "site_name",
+  "description",
+  "address_from_textile_details",
+  "address",
+  "city",
+  "state"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Site Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "fieldname": "address_from_textile_details",
+   "fieldtype": "Link",
+   "label": "Address from textile details",
+   "options": "Textile_Details of Production Units or Retailer Sales Outlets"
+  },
+  {
+   "fetch_from": "address_from_textile_details.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fetch_from": "address_from_textile_details.district",
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fetch_from": "address_from_textile_details.state",
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-20 15:39:09.034787",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Site List",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

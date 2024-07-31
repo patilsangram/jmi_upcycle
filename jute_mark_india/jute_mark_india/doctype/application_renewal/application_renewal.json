@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2023-06-09 17:31:41.961323",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "application_no",
+  "on_site_verification",
+  "reason_for_enhancement",
+  "column_break_zgkge",
+  "renewal_date",
+  "applicant_name",
+  "attachment_for_label",
+  "user_id",
+  "is_paid",
+  "section_break_uefgl",
+  "assign_vo_for_sites",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "JMI-AR-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "JMI-AR-",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Application No",
+   "options": "Jute Mark India Registration form",
+   "reqd": 1
+  },
+  {
+   "depends_on": "application_no",
+   "fieldname": "on_site_verification",
+   "fieldtype": "Link",
+   "label": "On Site Verification",
+   "options": "On-Site Verification Form"
+  },
+  {
+   "fieldname": "reason_for_enhancement",
+   "fieldtype": "Small Text",
+   "label": "Reason for Enhancement"
+  },
+  {
+   "fieldname": "column_break_zgkge",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "application_no.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Applicant Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attachment_for_label",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Attachment for Label"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Application Renewal",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "label": "Renewal Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assign_vo_for_sites",
+   "fieldtype": "Table",
+   "label": "Assign VO for Sites",
+   "options": "Label Enhancement VO Assignment"
+  },
+  {
+   "fieldname": "section_break_uefgl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-19 08:55:47.415029",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Application Renewal",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

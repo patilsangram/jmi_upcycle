@@ -1,0 +1,212 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2023-09-06 16:35:02.891158",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "application_number",
+  "application_date",
+  "applicant_name",
+  "category",
+  "ro_user_id",
+  "column_break_hve6v",
+  "registration_number",
+  "registration_date",
+  "on_site_verification_date",
+  "applicant_email",
+  "no_of_labels",
+  "regional_office",
+  "ro_username",
+  "attachments_section",
+  "registration_letter",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "application_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Application Number",
+   "no_copy": 1,
+   "options": "Jute Mark India Registration form",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "application_number.registration_number",
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "label": "Registration Number",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_number.entity_full_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_number.registration_date",
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_number.date",
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_hve6v",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "registration_letter",
+   "fieldtype": "Attach",
+   "label": "Registration Letter",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_number.category_b",
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category",
+   "read_only": 1
+  },
+  {
+   "fieldname": "no_of_labels",
+   "fieldtype": "Int",
+   "label": "No of Labels Attocated",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_number.email_id",
+   "fieldname": "applicant_email",
+   "fieldtype": "Data",
+   "label": "Applicant Email",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "JMI Registration",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "ro_user_id",
+   "fieldtype": "Link",
+   "label": "RO User ID",
+   "options": "User"
+  },
+  {
+   "fetch_from": "ro_user_id.full_name",
+   "fieldname": "ro_username",
+   "fieldtype": "Data",
+   "label": "RO Username",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "application_number.regional_office",
+   "fieldname": "regional_office",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Regional Office",
+   "options": "Regional Office",
+   "read_only": 1
+  },
+  {
+   "fieldname": "on_site_verification_date",
+   "fieldtype": "Date",
+   "label": "On-Site Verification Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-12 13:22:40.207477",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "JMI Registration",
+ "name_case": "Title Case",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verification Officer(VO)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HO",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

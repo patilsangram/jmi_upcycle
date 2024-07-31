@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:regional_office",
+ "creation": "2023-02-10 12:22:04.277118",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "state",
+  "district",
+  "column_break_wpys3",
+  "regional_office",
+  "address"
+ ],
+ "fields": [
+  {
+   "fieldname": "regional_office",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Regional Office",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Table MultiSelect",
+   "label": "State",
+   "options": "States",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Table MultiSelect",
+   "label": "District",
+   "options": "Districts",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wpys3",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "icon": "fa fa-globe",
+ "links": [],
+ "modified": "2023-04-14 12:44:13.782777",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Regional Office",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "select": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "states": [],
+ "title_field": "regional_office",
+ "translated_doctype": 1
+}

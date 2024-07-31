@@ -1,0 +1,57 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Jute Mark India Registration form",
+  "enabled": 0,
+  "modified": "2023-03-16 13:49:33.325095",
+  "module": null,
+  "name": "JMI Registration",
+  "script": "frappe.ui.form.on('Jute Mark India Registration form', {\n\trefresh(frm) {\n\t\t// your code here\n// \t\t$.each(frm.doc.textile_details_of_production_in_previous_year,  function(i,  d) {\n// \t\t    console.log(\"i=\",i,\"d=\",d)\n// \t\t    if(d.product_type == \"Article/Product\")\n//               {\n//                 set_field_options(\"d.uom\", [\"Numbers\",\"Pieces\"])\n//               }\n// \t\t});\n\t}\n})\n// frappe.ui.form.on(\"Jute Mark India Registration form\", \"textile_details_of_production_in_previous_year\", function(frm, cdt, cdn) {\n//     var child = locals[cdt][cdn];\n//     if(child.product_type == \"Article/Product\"){\n//     child.uom = \"Numbers/Pieces\";\n//     console.log(\"hi\")\n//     }\n//   // cur_frm.refresh_field(\"plan\");\n// });\n\n\nfrappe.ui.form.on('Textile_Details of Production In Previous Year', {\n    product_type:function(frm) {\n\t\t// your code here\n\n    \tif(frm.doc.product_type){\n    \t    console.log(\"in producttype\");\n    \t     if(frm.doc.product_type == \"Article/Product\")\n          {\n            set_field_options(\"uom\", [\"Numbers\",\"Pieces\"]);\n          }\n         frm.refresh_fields()\n    \t}\n    },\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Label Enhancement",
+  "enabled": 1,
+  "modified": "2023-03-10 12:05:37.500986",
+  "module": "jute_mark_india",
+  "name": "Label Enhancement",
+  "script": "frappe.ui.form.on('Label Enhancement', {\n   refresh: function(frm){\n    \n\tif(frm.doc.no_of_labels){\n\t    if (frm.doc.no_of_labels % 10 === 0){\n           console.log(\"no_of_labels  is multiple of 10\")\n\t       // validated = true;\n\t    }\n        if (frm.doc.no_of_labels % 10 !== 0){\n           //frappe.throw(\"No of labels must be multiple of 10\")}\n\t        frappe.throw(__(\"No of labels must be multiple of 10\"));}\n\t        validated = false;\n\t}\n   }\n});",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Request For Label Fulfilment",
+  "enabled": 1,
+  "modified": "2023-03-10 12:48:46.994527",
+  "module": null,
+  "name": "Request For Label Fulfilment",
+  "script": "frappe.ui.form.on('Request For Label Fulfilment', {\n\trefresh(frm) {},\n\tlabel_used:function(frm){\n\t\tvar balance_label = frm.doc.label_allotted - frm.doc.label_used\n\t\tfrm.doc.label_balanced = balance_label\n\t}\n})",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "On-Site Verification Form",
+  "enabled": 1,
+  "modified": "2023-03-10 17:40:50.515393",
+  "module": null,
+  "name": "on site Label Entitlement",
+  "script": "frappe.ui.form.on('On-Site Verification Form', {\n    refresh:function(frm){\n\tif(frm.doc.label_entitlement) {\n        validate_label(frm);\n         validated = false; \n\t}\n\tfunction validate_label(){\n\t     $.each(frm.doc.label_entitlement,  function(i,  d) { \n            if(d.no_of_labels_per_year% 10 !== 0){\n              \n               frappe.throw('No of labels must be multiple of 10');\n                \n            }\n\t     });\n\t}\n\t},\n\t\n})\n\n// frappe.ui.form.on('LABEL ENTITLEMENT', {\n// \tno_of_labels_per_year:function(frm) {\n// \t\t// your code here\n\t\n// \tif(frm.doc.no_of_labels_per_year){\n// \t    if (frm.doc.no_of_labels_per_year % 10 === 0){\n//           console.log(\"no_of_labels  is multiple of 10\")\n// \t       // validated = true;\n// \t    }\n//         if (frm.doc.no_of_labels_per_year % 10 !== 0){\n//           //frappe.throw(\"No of labels must be multiple of 10\")}\n// \t        frappe.throw(__(\"No of labels must be multiple of 10\"));}\n// \t        validated = false;\n// \t}\n// \t},\n// })",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Actual Site Visit Plan",
+  "enabled": 0,
+  "modified": "2023-03-21 18:34:33.937080",
+  "module": null,
+  "name": "Actual Site Visit Plan",
+  "script": "frappe.ui.form.on('Actual Site Visit Plan', {\n\t\n})\n\n// frappe.ui.form.on('Scheduling Site Visit', {\n// \tvalidate: function(frm) {\n//         if (frm.doc.visit_date < get_today()) {\n//             frappe.throw(__(\"Please select a visit date from the present or future.\"));\n//         }\n//     },\n// })",
+  "view": "Form"
+ }
+]

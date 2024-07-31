@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-14 13:28:48.133011",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "production_month",
+  "from_sequence_number",
+  "qty",
+  "column_break_ilp89",
+  "from_roll_number",
+  "production_year",
+  "barcode_constant",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "production_month",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Production Month",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_sequence_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Sequence Number",
+   "read_only": 1
+  },
+  {
+   "description": "Maximum Qty at a time is 1Lakh",
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ilp89",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "production_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Production Year",
+   "read_only": 1
+  },
+  {
+   "fieldname": "barcode_constant",
+   "fieldtype": "Data",
+   "label": "Barcode Constant",
+   "read_only": 1
+  },
+  {
+   "default": "JMI-QRB-.DD.-.MM.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "naming_series",
+   "options": "JMI-QRB-.DD.-.MM.-"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nStarted\nCompleted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "JMI QR Code Builder",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_roll_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Roll Number",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-05 15:59:15.345494",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "JMI QR Code Builder",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HO",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

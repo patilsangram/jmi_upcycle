@@ -1,0 +1,260 @@
+{
+ "actions": [],
+ "creation": "2023-03-23 11:20:57.908990",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "posting_date",
+  "app__reg_number",
+  "requested_by",
+  "contact_person_name",
+  "is_ro",
+  "column_break_xjysn",
+  "request_for_label",
+  "regional_office",
+  "entity_full_name",
+  "required_quantity",
+  "ro_to_ro_transfer_section",
+  "is_ro_transfer",
+  "is_paid",
+  "column_break_ea69x",
+  "from_ro_user",
+  "column_break_o73p8",
+  "from_ro_regional_office",
+  "section_break_9isqi",
+  "from_roll",
+  "to_roll",
+  "total_no_of_labels",
+  "column_break_h1i63",
+  "requested_quantity",
+  "partial_roll_selection",
+  "complete_roll_selection",
+  "from_qr_code",
+  "to_qr_code",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "regional_office",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Regional Office",
+   "options": "Regional Office",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Label Allocation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_h1i63",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_qr_code",
+   "fieldtype": "Link",
+   "label": "From QR Code",
+   "options": "JMI QR Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "to_qr_code",
+   "fieldtype": "Link",
+   "label": "To QR Code",
+   "options": "JMI QR Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_no_of_labels",
+   "fieldtype": "Int",
+   "label": "Total no. of Issued Labels",
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_for_label",
+   "fieldtype": "Link",
+   "label": "Label Request Id",
+   "options": "Request for Label",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_quantity",
+   "fieldtype": "Data",
+   "label": "Allotted Labels"
+  },
+  {
+   "depends_on": "eval: Number(doc.requested_quantity)%2000 != 0",
+   "description": "(If Partial Roll with specified qty not available)",
+   "fieldname": "complete_roll_selection",
+   "fieldtype": "Link",
+   "label": "Complete Roll Selection",
+   "options": "Roll wise QR"
+  },
+  {
+   "depends_on": "eval: Number(doc.requested_quantity)%2000 != 0",
+   "fieldname": "partial_roll_selection",
+   "fieldtype": "Link",
+   "label": "Partial Roll Selection",
+   "options": "Roll wise QR"
+  },
+  {
+   "description": "(As per Request For Label)",
+   "fieldname": "required_quantity",
+   "fieldtype": "Data",
+   "label": "Requested Labels",
+   "read_only": 1
+  },
+  {
+   "fieldname": "requested_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Requested By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_ro",
+   "fieldtype": "Check",
+   "label": "Is RO",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: Number(doc.requested_quantity)>=2000",
+   "fieldname": "from_roll",
+   "fieldtype": "Link",
+   "label": "From Roll",
+   "options": "Roll wise QR"
+  },
+  {
+   "depends_on": "eval:doc.from_roll",
+   "fieldname": "to_roll",
+   "fieldtype": "Link",
+   "label": "To Roll",
+   "mandatory_depends_on": "eval:doc.from_roll",
+   "options": "Roll wise QR"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_ro_transfer",
+   "fieldtype": "Check",
+   "label": "Is Ro Transfer",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "is_ro_transfer",
+   "fieldname": "from_ro_user",
+   "fieldtype": "Link",
+   "label": "From RO User",
+   "options": "User"
+  },
+  {
+   "depends_on": "is_ro_transfer",
+   "fieldname": "from_ro_regional_office",
+   "fieldtype": "Link",
+   "label": "From RO Regional Office",
+   "options": "Regional Office",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ro_to_ro_transfer_section",
+   "fieldtype": "Section Break",
+   "label": "RO To RO Transfer",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_break_9isqi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xjysn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ea69x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_o73p8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "requested_by.full_name",
+   "fieldname": "contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fetch_from": "request_for_label.app__reg_number",
+   "fieldname": "app__reg_number",
+   "fieldtype": "Data",
+   "label": "App / Reg Number"
+  },
+  {
+   "fetch_from": "request_for_label.entity_full_name",
+   "fieldname": "entity_full_name",
+   "fieldtype": "Data",
+   "label": "Entity Full Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-18 11:47:54.972298",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Label Allocation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

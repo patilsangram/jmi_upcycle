@@ -1,0 +1,773 @@
+{
+ "actions": [],
+ "creation": "2023-02-13 11:14:49.973396",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "connections_tab",
+  "details_of_applicant_tab",
+  "progress",
+  "registration_number",
+  "category_b",
+  "applicant_name",
+  "middle_name",
+  "last_name",
+  "gender",
+  "renewed_on",
+  "column_break_i0csc",
+  "mobile_number",
+  "email_id",
+  "category_id",
+  "date",
+  "registration_date",
+  "next_renewal_date",
+  "religion",
+  "category__scst_other_in_case_b_is_1",
+  "entity_full_name",
+  "application_renewal",
+  "application_label_enhancement",
+  "address_details_tab",
+  "state",
+  "state_code",
+  "district",
+  "district_code",
+  "regional_office",
+  "tahsil__taluka",
+  "tahsil_taluka_code",
+  "townvillage",
+  "column_break_kdldq",
+  "assign_to",
+  "assigned_user",
+  "address_line_1",
+  "address_line_2",
+  "address_line_3",
+  "pin_code",
+  "save_next_1",
+  "details_of_product_tab",
+  "product_details_section",
+  "textile_details_of_product",
+  "details_of_production_unitsretailer_sales_outlets_section",
+  "textile_details_of_production_units_or_retailer_sales_outlets",
+  "submission_of_sample_for_testing_section",
+  "submission_of_sample_for_testing",
+  "attach_sample_report",
+  "no_child_labor_emp_mfg_product",
+  "no_hazardous_chemical_used_mfg_product",
+  "save_next_2",
+  "contact_details_tab",
+  "njb_regi_no",
+  "aadhar_number",
+  "udyog_aadhar",
+  "pan_number",
+  "gst_number",
+  "gst_copy",
+  "identification_proof_is",
+  "photo",
+  "proof_of_address",
+  "column_break_mjykn",
+  "certificate_of_registration__in_case_b_is_2_or_3",
+  "identification_proof",
+  "sample_report",
+  "aadhar_card_copy",
+  "udyog_aadhar_copy",
+  "pan_card_copy",
+  "bondagreement",
+  "label_check",
+  "section_break_vsday",
+  "declaration",
+  "i_agree",
+  "select_terms",
+  "terms",
+  "instructions_for_filling_of_application",
+  "amended_from",
+  "assigned_to",
+  "save_next_3",
+  "documents_tab",
+  "upload_agreement",
+  "documents",
+  "save_submit",
+  "is_paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_of_applicant_tab",
+   "fieldtype": "Tab Break",
+   "label": "Applicant Details"
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "depends_on": "eval: doc.category_b == 'Artisan'",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "mandatory_depends_on": "eval: doc.category_b == 'Artisan'",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number",
+   "length": 10,
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_i0csc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email Id",
+   "options": "Email"
+  },
+  {
+   "fieldname": "category_b",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "\nArtisan\nManufacturer\nRetailer",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.category_b == 'Artisan'",
+   "fieldname": "religion",
+   "fieldtype": "Select",
+   "label": "Religion",
+   "options": "\nBuddhism\nChristian\nHindu\nIslam\nJain\nOthers\nSikh"
+  },
+  {
+   "depends_on": "eval: doc.category_b == 'Artisan'",
+   "fieldname": "category__scst_other_in_case_b_is_1",
+   "fieldtype": "Select",
+   "label": "Category ( SC/ST/ Other) (In Case Of Artisan)",
+   "options": "\nSC\nST\nOther"
+  },
+  {
+   "fieldname": "contact_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Uploads"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach",
+   "label": "Passport Size Photo"
+  },
+  {
+   "description": "(Attach copy of anyone proof like  Aadhaar Card/Passport/Driving License/Voter ID/Electricity Bill, Reg. Certificate)",
+   "fieldname": "proof_of_address",
+   "fieldtype": "Attach",
+   "label": "Proof Of Address"
+  },
+  {
+   "depends_on": "eval: doc.category_b == 'Artisan'",
+   "description": "Example: 123456789123",
+   "fieldname": "aadhar_number",
+   "fieldtype": "Data",
+   "label": "Aadhar Number",
+   "length": 12,
+   "non_negative": 1,
+   "unique": 1
+  },
+  {
+   "depends_on": "eval: doc.category_b != 'Artisan'",
+   "description": "Example:  UDAYAM-KR-07-0003524",
+   "fieldname": "udyog_aadhar",
+   "fieldtype": "Data",
+   "label": "Udyam Aadhar",
+   "length": 20
+  },
+  {
+   "description": "Example: ABCTY1234A",
+   "fieldname": "pan_number",
+   "fieldtype": "Data",
+   "label": "PAN Number",
+   "unique": 1
+  },
+  {
+   "description": "Example: 22 ABCTY1234A1Z5",
+   "fieldname": "gst_number",
+   "fieldtype": "Data",
+   "label": "GST Number",
+   "length": 15,
+   "unique": 1
+  },
+  {
+   "fieldname": "certificate_of_registration__in_case_b_is_2_or_3",
+   "fieldtype": "Attach",
+   "label": "Certificate of Registration ( For Manufacturer or Retailer )"
+  },
+  {
+   "fieldname": "column_break_mjykn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "(Attach copy of anyone ID proof like Aadhaar Card/Passport/Driving License/Election Commission ID Card/other government issued ID card)\n\n",
+   "fieldname": "identification_proof",
+   "fieldtype": "Attach",
+   "label": "Identification Proof"
+  },
+  {
+   "fieldname": "aadhar_card_copy",
+   "fieldtype": "Attach",
+   "label": "Aadhar Card Copy"
+  },
+  {
+   "fieldname": "udyog_aadhar_copy",
+   "fieldtype": "Attach",
+   "label": "Udyog Aadhar Copy"
+  },
+  {
+   "fieldname": "pan_card_copy",
+   "fieldtype": "Attach",
+   "label": "PAN Card Copy"
+  },
+  {
+   "fieldname": "gst_copy",
+   "fieldtype": "Attach",
+   "label": "GST Copy"
+  },
+  {
+   "fieldname": "address_details_tab",
+   "fieldtype": "Section Break",
+   "label": "Address Details"
+  },
+  {
+   "description": "House/Building No, Street/Lane Name 1\n\n",
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1",
+   "reqd": 1
+  },
+  {
+   "description": "Street/Lane Name 2, Area/Locality\n\n",
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "description": "Land Mark",
+   "fieldname": "address_line_3",
+   "fieldtype": "Data",
+   "label": "Address Line 3"
+  },
+  {
+   "fieldname": "column_break_kdldq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "label": "State",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tahsil__taluka",
+   "fieldtype": "Link",
+   "label": "Tahsil / Taluka ",
+   "options": "TalukaTahsil"
+  },
+  {
+   "bold": 1,
+   "fieldname": "details_of_product_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details of Product",
+   "options": "fa fa-tag"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "textile_details_of_product",
+   "fieldtype": "Table",
+   "options": "Details of Products"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_of_production_unitsretailer_sales_outlets_section",
+   "fieldtype": "Section Break",
+   "label": "Details of Production Units/Retailer Sales Outlets"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "textile_details_of_production_units_or_retailer_sales_outlets",
+   "fieldtype": "Table",
+   "options": "Textile_Details of Production Units or Retailer Sales Outlets"
+  },
+  {
+   "fieldname": "submission_of_sample_for_testing_section",
+   "fieldtype": "Section Break",
+   "label": "Submission of Sample For Testing"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "submission_of_sample_for_testing",
+   "fieldtype": "Table",
+   "options": "Submission of Sample For Testing"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Jute Mark India Registration form",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "testing",
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "hidden": 1,
+   "label": "progress_bar",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pin_code",
+   "fieldtype": "Link",
+   "label": "Pin Code",
+   "length": 6,
+   "non_negative": 1,
+   "options": "Pincode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "select_terms",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Select Terms",
+   "options": "Terms and Conditions"
+  },
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "hidden": 1,
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "section_break_vsday",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "instructions_for_filling_of_application",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Instructions for filling of application ",
+   "options": "Instructions for filling of Registration Application"
+  },
+  {
+   "default": "I / we hereby declare that the information furnished above is true and complete to best of my  / our knowledge. I / we agree to abide by the rules and regulations formulated from time to time under the Jute Mark India Scheme.\n\n",
+   "fieldname": "declaration",
+   "fieldtype": "Small Text",
+   "label": "Declaration",
+   "read_only": 1
+  },
+  {
+   "fieldname": "townvillage",
+   "fieldtype": "Data",
+   "label": "Town/Village"
+  },
+  {
+   "default": "0",
+   "fieldname": "attach_sample_report",
+   "fieldtype": "Check",
+   "label": "Will You Submit Sample Report"
+  },
+  {
+   "depends_on": "attach_sample_report ===0;",
+   "fieldname": "sample_report",
+   "fieldtype": "Attach",
+   "label": "Sample Report"
+  },
+  {
+   "fieldname": "identification_proof_is",
+   "fieldtype": "Select",
+   "label": "Identification Proof (For Artisan Only)",
+   "options": "\nAadhaar Card\nDriving License\nElection Commission ID Card\nOther government issued ID card\nPassport"
+  },
+  {
+   "default": "0",
+   "fieldname": "i_agree",
+   "fieldtype": "Check",
+   "label": "I Agree"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "district.district_code",
+   "fieldname": "district_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "District Code"
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "assigned_to"
+  },
+  {
+   "fetch_from": "category_b.category_id",
+   "fieldname": "category_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Category ID"
+  },
+  {
+   "depends_on": "eval: doc.category_b != 'Artisan'",
+   "fieldname": "entity_full_name",
+   "fieldtype": "Data",
+   "label": "Entity Full Name"
+  },
+  {
+   "description": "Example: NJB25XXX000000000",
+   "fieldname": "njb_regi_no",
+   "fieldtype": "Data",
+   "label": "NJB Regi No",
+   "unique": 1
+  },
+  {
+   "fieldname": "bondagreement",
+   "fieldtype": "Attach",
+   "hidden": 1,
+   "label": "Bond/Agreement"
+  },
+  {
+   "fieldname": "documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Agreement and Test Reports"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Test Reports",
+   "options": "JMI Documents"
+  },
+  {
+   "fieldname": "registration_number",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "App / Reg Number",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "upload_agreement",
+   "fieldtype": "Attach",
+   "label": "Upload Agreement"
+  },
+  {
+   "fieldname": "regional_office",
+   "fieldtype": "Link",
+   "label": "Regional Office",
+   "options": "Regional Office",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.category_b == 'Artisan'",
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "label": "Assign To",
+   "options": "User",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "save_next_1",
+   "fieldtype": "Button",
+   "label": "Save & Next"
+  },
+  {
+   "fieldname": "save_next_2",
+   "fieldtype": "Button",
+   "label": "Save & Next"
+  },
+  {
+   "fieldname": "save_submit",
+   "fieldtype": "Button",
+   "label": "Save & Submit"
+  },
+  {
+   "fieldname": "save_next_3",
+   "fieldtype": "Button",
+   "label": "Save & Next"
+  },
+  {
+   "fetch_from": "state.state_code",
+   "fieldname": "state_code",
+   "fieldtype": "Data",
+   "label": "State Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "tahsil__taluka.sub_district_code",
+   "fieldname": "tahsil_taluka_code",
+   "fieldtype": "Data",
+   "label": "Tahsil Taluka Code",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "application_renewal",
+   "fieldtype": "Check",
+   "label": "Application Renewal"
+  },
+  {
+   "default": "0",
+   "fieldname": "label_check",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Label Check",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "application_label_enhancement",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Application Label Enhancement",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.category_b == 'Artisan'",
+   "fetch_from": "assign_to.full_name",
+   "fieldname": "assigned_user",
+   "fieldtype": "Data",
+   "label": "Assigned User",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_renewal_date",
+   "fieldtype": "Date",
+   "label": "Next Renewal Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "renewed_on",
+   "fieldtype": "Date",
+   "label": "Renewed On",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "no_child_labor_emp_mfg_product",
+   "fieldtype": "Check",
+   "label": "No Child labour"
+  },
+  {
+   "default": "0",
+   "fieldname": "no_hazardous_chemical_used_mfg_product",
+   "fieldtype": "Check",
+   "label": "No Hazardous chemical"
+  },
+  {
+   "bold": 1,
+   "fieldname": "product_details_section",
+   "fieldtype": "Section Break",
+   "label": "Product Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Actual Site Visit Plan",
+   "link_fieldname": "application_no",
+   "parent_doctype": "Actual Site Visit Plan",
+   "table_fieldname": "actual_visit_plan"
+  },
+  {
+   "link_doctype": "On-Site Verification Form",
+   "link_fieldname": "textile_registration_no"
+  }
+ ],
+ "modified": "2024-07-25 22:51:54.954160",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "Jute Mark India Registration form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HO",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "JMI User",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verification Officer(VO)",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Verification Officer(VO)",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Regional Officer(RO)",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HO",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "registration_number",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "registration_number",
+ "track_changes": 1
+}

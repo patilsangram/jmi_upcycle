@@ -1,0 +1,44 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-10 18:50:11.066158",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type_of_product",
+  "type_of_label",
+  "no_of_labels_per_year"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_of_product",
+   "fieldtype": "Link",
+   "label": "Type of product",
+   "options": "Product Type"
+  },
+  {
+   "fieldname": "no_of_labels_per_year",
+   "fieldtype": "Data",
+   "label": "No. of Labels per year"
+  },
+  {
+   "fieldname": "type_of_label",
+   "fieldtype": "Select",
+   "label": "Type of Label",
+   "options": "\nTemporary\nPermanent"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-09 19:32:33.038644",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "LABEL ENTITLEMENT",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-10 17:48:14.251382",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "product_type",
+  "product_description",
+  "jmi_product_function",
+  "upload_test_report",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "upload_test_report",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Upload Test Report"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "product_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product Type",
+   "options": "Product Type"
+  },
+  {
+   "fieldname": "jmi_product_function",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "JMI Product Function",
+   "options": "JMI Product Function"
+  },
+  {
+   "fieldname": "product_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-08 15:47:48.877378",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "JMI Documents",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

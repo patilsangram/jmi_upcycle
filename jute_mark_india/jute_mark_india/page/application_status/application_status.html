@@ -1,0 +1,78 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th style="width: 10%">{%= __("Application Status") %}</th>
+			<th style="width: 10%">{%= __("Record Count") %}</th>
+			<th style="width: 15%">{%= __("Progress") %}</th>
+		</tr>
+	</thead>
+    <tbody>
+		{% for(var i=0, l=data.length; i<l; i++) { %}
+			<tr>
+				<td class="tbl-td">{%= data[i].application_status %}</td>
+				<td class="tbl-td">{%= data[i].record_count %}</td>
+                <td class="tbl-td">
+                    <div class="wrapper">
+                        <div class="progress-bar">
+                            <span class="progress-bar-nonfill" style="width: {{data[i].remaining_per}}%"></span>
+                            <span class="progress-bar-fill {{data[i].application_status_lower}}" style="width: {{data[i].progress_per}}%"></span>
+                            <span class="progress-bar-nonfill" style="width: {{data[i].remaining_per}}%"></span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {% } %}
+	</tbody>
+</table>
+
+<style>
+    .progress-bar {
+        background-color: #fff;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+        display: -webkit-box;
+    }
+    
+    .progress-bar-fill {
+        display: block;
+        height: 25px;
+        transition: width 500ms ease-in-out;
+    }
+
+    .progress-bar-nonfill {
+        display: block;
+        height: 25px;
+        background-color: #fff;
+        transition: width 500ms ease-in-out;
+    }
+
+    .applications {
+        background-color: chartreuse;
+    }
+
+    .payment_made {
+        background-color:#c17f60;
+    }
+
+    .application_submitted {
+        background-color:#ff9933;
+    }
+
+    .allotment_to_vo {
+        background-color: #cccc00;
+    }
+
+    .registration {
+        background-color: #999966;
+    }
+    .report_submitted {
+        background-color: #996633;
+    }
+
+    .site_verified {
+        background-color: coral;
+    }
+
+    .tbl-td {
+        padding: 2px 2px 2px 10px !important;
+    }
+</style>

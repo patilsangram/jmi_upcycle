@@ -1,0 +1,89 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<form role="form" class="form-signup">
+  <div>
+      <input type="email" name="email_id" id="email_id" class="form-control" placeholder="Email Address" reqd>
+      <br>
+      <input name="mobile_number" id="mobile_number" class="form-control" placeholder="Mobile Number" maxlength="10" reqd>
+  </div>
+  <br>
+  <center>
+  <button class="btn mt-2 btn-sm send-otp-btn" id="send-otp-btn">Send OTP</button>
+  <button class="btn mt-2 btn-sm enter-otp-btn" id="enter-otp-btn">Enter OTP</button>
+  <br><br>
+  <div class="form-group">
+      <input name="enter_otp" id="enter-otp" class="form-control" placeholder="Enter OTP" style="display: none" maxlength="6">
+  </div>
+  <br>
+  <div>
+      <button class="btn btn-primary mt-2 btn-sm verify-otp-btn" id="verify-otp-btn" style="display: none">Verify OTP</button>
+  </div>
+  </center>
+</form>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  	$('#send-otp-btn').click(function() {
+  		event.preventDefault();
+  		var args = {};
+  		args.email = ($("#email_id").val() || "").trim();
+  		args.phone = ($("#mobile_number").val() || "").trim();
+  		if (args.email && args.phone){
+  			frappe.call({
+  				method:'jute_mark_india.www.registration.register',
+  				freeze: true,
+  				args: {
+  					'email_id': args.email,
+  					'mobile_number': args.phone
+  				},
+  			})
+  			.done(success => {
+  				if(success.message) {
+  					frappe.msgprint("OTP Sent Successfully");
+  				}
+  				else{
+  				    frappe.throw('User already Registered with this Email/Mobile No.');
+  				}
+  			});
+  		}
+  		else{
+  		   frappe.throw('Email and Mobile Number are Required!');
+  		}
+  	});
+
+  	$('#enter-otp-btn').click(function() {
+  		$('#enter-otp').show();
+  		$('#verify-otp-btn').show();
+  		event.preventDefault();
+  	});
+
+  	$('#verify-otp-btn').click(function() {
+  		event.preventDefault();
+  		var args = {};
+  		args.phone = ($("#mobile_number").val() || "").trim();
+  		args.otp = ($("#enter-otp").val() || "").trim();
+  		if (args.otp && args.phone){
+  			frappe.call({
+  				method:'jute_mark_india.www.registration.verify_otp',
+  				freeze: true,
+  				args: {
+  					'mobile_number': args.phone,
+  					'otp': args.otp
+  				},
+  			})
+  			.done(success => {
+  				if(success.message) {
+  					frappe.msgprint("OTP Validated Succefully.");
+  					location.href = '/jute-mark-india-registration/new';
+  				}
+  				else{
+  				    frappe.throw('Invalid OTP. Plesae try again!');
+  				}
+  			});
+  		}
+  		else{
+  		   frappe.throw('OTP and Mobile Number are Required!');
+  		}
+  	});
+  });
+</script>

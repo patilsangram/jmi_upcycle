@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "creation": "2023-03-09 14:53:27.887251",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "qr_code_generation_settings_section",
+  "qr_code_generation_constant",
+  "cipher_mode",
+  "password_for_encryption",
+  "column_break_id4oj",
+  "algorithm_for_encryption",
+  "key_size",
+  "roll_number",
+  "qr_code_sequence_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "qr_code_generation_settings_section",
+   "fieldtype": "Section Break",
+   "label": "QR Code Generation Settings"
+  },
+  {
+   "default": "10",
+   "description": "An Integer in range 1-10",
+   "fieldname": "qr_code_generation_constant",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "QR Code Generation Constant",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "algorithm_for_encryption",
+   "fieldtype": "Select",
+   "label": "Algorithm for Encryption",
+   "options": "AES",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cipher_mode",
+   "fieldtype": "Select",
+   "label": "Cipher Mode",
+   "options": "ECB",
+   "reqd": 1
+  },
+  {
+   "default": "128",
+   "description": "Key Size In Bits",
+   "fieldname": "key_size",
+   "fieldtype": "Select",
+   "label": "Key Size",
+   "options": "128",
+   "reqd": 1
+  },
+  {
+   "fieldname": "password_for_encryption",
+   "fieldtype": "Password",
+   "label": "Password for encryption",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_id4oj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qr_code_sequence_id",
+   "fieldtype": "Data",
+   "label": "QR Code Sequence ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "roll_number",
+   "fieldtype": "Data",
+   "label": "Roll Number",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-06-05 15:55:49.197572",
+ "modified_by": "Administrator",
+ "module": "jute_mark_india",
+ "name": "QR Code Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "select": 1,
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
